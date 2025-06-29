@@ -1,16 +1,16 @@
-package org.threeadd.commandHider;
+package org.threeadd.addscommandhider;
 
 import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPIBukkitConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.threeadd.commandHider.commands.MainCommand;
-import org.threeadd.commandHider.listeners.CommandSendListener;
+import org.threeadd.addscommandhider.commands.MainCommand;
+import org.threeadd.addscommandhider.listeners.CommandSendListener;
 
-public final class CommandHider extends JavaPlugin {
-    static CommandHider instance;
+public final class AddsCommandHider extends JavaPlugin {
+    static AddsCommandHider instance;
 
-    public static CommandHider getInstance() {
+    public static AddsCommandHider getInstance() {
         return instance;
     }
 

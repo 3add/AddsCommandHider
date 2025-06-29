@@ -1,4 +1,4 @@
-package org.threeadd.commandHider.objects;
+package org.threeadd.addscommandhider.objects;
 
 public class HiddenCommand {
 

@@ -1,8 +1,8 @@
-package org.threeadd.commandHider.handlers;
+package org.threeadd.addscommandhider.handlers;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.threeadd.commandHider.CommandHider;
-import org.threeadd.commandHider.objects.HiddenCommand;
+import org.threeadd.addscommandhider.AddsCommandHider;
+import org.threeadd.addscommandhider.objects.HiddenCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.Map;
 public class ConfigParser {
 
     public static List<HiddenCommand> getBlockedCommands() {
-        FileConfiguration config = CommandHider.getInstance().getConfig();
+        FileConfiguration config = AddsCommandHider.getInstance().getConfig();
 
-        List<Map<?,?>> unparsedMapList = config.getMapList("CommandHider.BlockedCommands");
+        List<Map<?,?>> unparsedMapList = config.getMapList("AddsCommandHider.BlockedCommands");
         List<HiddenCommand> commandList = new ArrayList<>();
         for (Map<?, ?> unknownMap : unparsedMapList) {
 
@@ -27,8 +27,8 @@ public class ConfigParser {
     }
 
     public static boolean getBlockNamespaceStatus() {
-        FileConfiguration config = CommandHider.getInstance().getConfig();
-        return config.getBoolean("CommandHider.BlockedNamespaces");
+        FileConfiguration config = AddsCommandHider.getInstance().getConfig();
+        return config.getBoolean("AddsCommandHider.BlockedNamespaces");
 
     }
 }

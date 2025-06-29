@@ -1,6 +1,6 @@
 name: CommandHider
 version: '1.1'
-main: org.threeadd.commandHider.CommandHider
+main: org.threeadd.addscommandhider.AddsCommandHider
 api-version: '1.21'
 authors: [ 3add ]
 description: Command Hiding plugin

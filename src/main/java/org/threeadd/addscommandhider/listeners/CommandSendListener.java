@@ -1,13 +1,12 @@
-package org.threeadd.commandHider.listeners;
+package org.threeadd.addscommandhider.listeners;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandSendEvent;
-import org.threeadd.commandHider.CommandHider;
-import org.threeadd.commandHider.handlers.ConfigParser;
-import org.threeadd.commandHider.objects.HiddenCommand;
+import org.threeadd.addscommandhider.AddsCommandHider;
+import org.threeadd.addscommandhider.handlers.ConfigParser;
+import org.threeadd.addscommandhider.objects.HiddenCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +42,6 @@ public class CommandSendListener implements Listener {
             }
         }
 
-        CommandHider.getInstance().getLogger().info("Hid " + removedCommands + " commands from " + player.getName());
+        AddsCommandHider.getInstance().getLogger().info("Hid " + removedCommands + " commands from " + player.getName());
     }
 }
