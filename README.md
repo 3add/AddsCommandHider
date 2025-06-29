@@ -1,4 +1,4 @@
-# Command Hider v1.1
+# Adds Command Hider v1.1
 Command Hider is a command hiding plugin, for example
 preventing players from viewing /plugins in tab completions when typing "/"
 
