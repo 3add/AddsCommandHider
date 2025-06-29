@@ -6,5 +6,7 @@
 ## Command(s)
 - /commandhider reload -> Reload config and player commands
 - /commandhider help -> Receive the help message
+- /commandhider version -> Receive the version message
+
 Permission: commandhider.command
 ### Brought to you by 3add, consider suggesting features
