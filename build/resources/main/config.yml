@@ -1,0 +1,13 @@
+# The config file for the plugin is fairly simple, each section has it's explanation above
+# Made by 3add
+
+CommandHider:
+
+  # All the commands the server will block, each command can have it's own bypass permsission
+  # (If you wish for the command to be blocked for all players, leave it empty)
+  BlockedCommands:
+    - plugins: "CommandHider.bypass"
+
+  # If the plugin should deny the namespace usage (/namespace:command)
+  # The bypass permission for this setting is CommandHider.bypass.namespacing
+  BlockedNamespaces: true
