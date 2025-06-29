@@ -6,7 +6,7 @@ preventing players from viewing /plugins in tab completions when typing /
 **WARNING Command Hider does not prevent commands from usage, just hides them from tab completion**
 
 
-### Containing
+### Version 1.1 Containing
 ## Editable config.yml file with various options
 - Option to add blocked commands with a bypass permission
 - Option to block all namespaced commands
