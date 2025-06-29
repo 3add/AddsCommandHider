@@ -1,11 +1,7 @@
 package org.threeadd.commandHider.commands;
 
 
-import dev.jorel.commandapi.CommandAPI;
-import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.CommandTree;
-import dev.jorel.commandapi.RegisteredCommand;
-import dev.jorel.commandapi.arguments.AbstractArgument;
 import dev.jorel.commandapi.arguments.LiteralArgument;
 import dev.jorel.commandapi.executors.CommandArguments;
 import net.kyori.adventure.text.Component;
@@ -15,32 +11,31 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.threeadd.commandHider.CommandHider;
 
-import java.util.List;
-
 public class MainCommand {
 
     public MainCommand() {
         new CommandTree("commandhider")
                 .withPermission("commandhider.command")
                 .executes(this::helpMessage)
-                .then(
-                        new LiteralArgument("reload")
-                                .executes(this::reloadConfig)
-                )
-                .then(
-                        new LiteralArgument("help")
-                                .executes(this::helpMessage)
-                )
+                .then(new LiteralArgument("reload").executes(this::reloadConfig))
+                .then(new LiteralArgument("help").executes(this::helpMessage))
+                .then(new LiteralArgument("version").executes(this::infoMessage))
                 .register("commandhider");
     }
 
     private void helpMessage(CommandSender sender, CommandArguments args) {
 
         String version = CommandHider.getInstance().getPluginMeta().getVersion();
-        sender.sendMessage(textParse("\n<#AE78FF><b>COMMAND HIDER </b><#CFAFFF>v" + version + "\n" +
+        sender.sendMessage(textParse("\n<#AE78FF><b>Command Hider </b><#CFAFFF>v" + version + "\n\n" +
                 " <dark_gray>- <white>/commandhider reload <gray>- <#CFAFFF>Reload config and player commands\n" +
-                " <dark_gray>- <white>/commandhider help <gray>- <#CFAFFF>Receive the help message" +
-                "\n\nBrought to you by 3add\n"));
+                " <dark_gray>- <white>/commandhider help <gray>- <#CFAFFF>Receive the help message\n" +
+                " <dark_gray>- <white>/commandhider version <gray>- <#CFAFFF>Receive the version\n" +
+                "\nBrought to you by 3add\n"));
+    }
+
+    private void infoMessage(CommandSender sender, CommandArguments args) {
+        String version = CommandHider.getInstance().getPluginMeta().getVersion();
+        sender.sendMessage(textParse("Running <#AE78FF><b>Command Hider </b><#CFAFFF>v" + version));
     }
 
     private void reloadConfig(CommandSender sender, CommandArguments args) {
