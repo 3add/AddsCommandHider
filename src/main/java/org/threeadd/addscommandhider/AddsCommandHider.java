@@ -26,7 +26,7 @@ public final class AddsCommandHider extends JavaPlugin {
         // Plugin startup logic
         instance = this;
 
-        this.getLogger().info("Started CommandHider v" + this.getPluginMeta().getVersion() + "by 3add");
+        this.getLogger().info("Started AddsCommandHider v" + this.getPluginMeta().getVersion() + "by 3add");
         Bukkit.getPluginManager().registerEvents(new CommandSendListener(), this);
 
         saveResource("config.yml", false);
